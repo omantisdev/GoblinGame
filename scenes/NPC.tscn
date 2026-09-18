@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://coinln8hlv43n"]
+
+[ext_resource type="Script" uid="uid://drwg5ala8gycw" path="res://scripts/npc.gd" id="1_mhefn"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_joqdt"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_joqdt"]
+
+[node name="NPC" type="CharacterBody3D" unique_id=1806553320]
+script = ExtResource("1_mhefn")
+metadata/_custom_type_script = "uid://drwg5ala8gycw"
+
+[node name="Collider" type="CollisionShape3D" parent="." unique_id=1174172500]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_joqdt")
+
+[node name="Sprite" type="AnimatedSprite3D" parent="." unique_id=1302636421]
+sprite_frames = SubResource("SpriteFrames_joqdt")

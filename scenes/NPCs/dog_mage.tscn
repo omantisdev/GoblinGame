@@ -1,0 +1,149 @@
+[gd_scene format=3 uid="uid://bj273kofisr6w"]
+
+[ext_resource type="Texture2D" uid="uid://cmkry4jykc5lq" path="res://sprites/dogmage/IdleSheet1.png" id="1_cs0sm"]
+[ext_resource type="Texture2D" uid="uid://cdn8aj7y84rdu" path="res://sprites/dogmage/WalkSheet1.png" id="2_xpyjn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xpyjn"]
+atlas = ExtResource("1_cs0sm")
+region = Rect2(0, 0, 2882, 2160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i0un6"]
+atlas = ExtResource("1_cs0sm")
+region = Rect2(2882, 0, 2882, 2160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gmrlg"]
+atlas = ExtResource("1_cs0sm")
+region = Rect2(5764, 0, 2882, 2160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h0fef"]
+atlas = ExtResource("1_cs0sm")
+region = Rect2(8646, 0, 2882, 2160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vmaem"]
+atlas = ExtResource("1_cs0sm")
+region = Rect2(0, 2160, 2882, 2160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwie3"]
+atlas = ExtResource("1_cs0sm")
+region = Rect2(2882, 2160, 2882, 2160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0r7mu"]
+atlas = ExtResource("1_cs0sm")
+region = Rect2(5764, 2160, 2882, 2160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yswvq"]
+atlas = ExtResource("2_xpyjn")
+region = Rect2(0, 0, 2882, 2160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2nehr"]
+atlas = ExtResource("2_xpyjn")
+region = Rect2(2882, 0, 2882, 2160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smk2d"]
+atlas = ExtResource("2_xpyjn")
+region = Rect2(5764, 0, 2882, 2160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_786kh"]
+atlas = ExtResource("2_xpyjn")
+region = Rect2(8646, 0, 2882, 2160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b0b1b"]
+atlas = ExtResource("2_xpyjn")
+region = Rect2(0, 2160, 2882, 2160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o60yq"]
+atlas = ExtResource("2_xpyjn")
+region = Rect2(2882, 2160, 2882, 2160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1701"]
+atlas = ExtResource("2_xpyjn")
+region = Rect2(5764, 2160, 2882, 2160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_toviy"]
+animations = [{
+"frames": [{
+"duration": 10.0,
+"texture": SubResource("AtlasTexture_xpyjn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i0un6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gmrlg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h0fef")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vmaem")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nwie3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0r7mu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nwie3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vmaem")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h0fef")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gmrlg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i0un6")
+}],
+"loop": 1,
+"name": &"Idle1",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yswvq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2nehr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smk2d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_786kh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b0b1b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o60yq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v1701")
+}],
+"loop": 1,
+"name": &"Walk1",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_toviy"]
+radius = 0.7067871
+height = 1.5246582
+
+[node name="DogMage" type="CharacterBody3D" unique_id=1549348252]
+collision_layer = 4
+collision_mask = 0
+
+[node name="Sprite" type="AnimatedSprite3D" parent="." unique_id=1013793454]
+pixel_size = 0.00075
+sprite_frames = SubResource("SpriteFrames_toviy")
+animation = &"Idle1"
+autoplay = "Idle1"
+frame_progress = 0.02591192
+
+[node name="Collider" type="CollisionShape3D" parent="." unique_id=1678443161]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0748291, 0)
+shape = SubResource("CapsuleShape3D_toviy")
