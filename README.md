@@ -14,5 +14,3 @@
 == Marketing
 - [] Setup social media
 - [] Finish stream setup (Mic)
-# Goblin Game Forever
-# Goblin Game Forever
